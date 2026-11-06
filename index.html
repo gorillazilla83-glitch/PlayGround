@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#100d20" />
+  <title>FATAL FURY: Flames of the Ring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="cabinet" id="cabinet">
+    <header class="topline"><a class="brand" href="#" aria-label="Flames of the Ring home"><span class="brand-mark">F</span><span>FATAL <b>FURY</b><small>FLAMES OF THE RING</small></span></a><div class="edition">ARCADE EDITION <i>●</i> 1994</div><button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">♪ <span>SOUND ON</span></button></header>
+    <section class="game-shell" aria-label="Fighting game">
+      <div class="hud">
+        <div class="fighter-card left-card"><div class="nameplate"><span class="flag">JP</span><span>MAI<br/><b>SHIRANUI</b></span></div><div class="bar-wrap"><div class="bar-label"><span>VITALITY</span><span id="pHealthText">100%</span></div><div class="health-track"><div class="health-fill player-health" id="pHealth"></div></div></div><div class="wins" id="pWins"><i></i><i></i></div></div>
+        <div class="center-hud"><div class="round-label" id="roundLabel">ROUND <b>01</b></div><div class="timer" id="timer">60</div><div class="fight-status" id="fightStatus">READY?</div></div>
+        <div class="fighter-card right-card"><div class="nameplate"><span class="flag">BR</span><span>BIG<br/><b>BEAR</b></span></div><div class="bar-wrap"><div class="bar-label"><span id="eHealthText">100%</span><span>VITALITY</span></div><div class="health-track"><div class="health-fill enemy-health" id="eHealth"></div></div></div><div class="wins" id="eWins"><i></i><i></i></div></div>
+      </div>
+      <div class="arena" id="arena">
+        <canvas id="gameCanvas" aria-label="Mai Shiranui fights Big Bear"></canvas>
+        <div class="screen-shade"></div><div class="round-banner" id="roundBanner"><span>ROUND 01</span><strong>READY?</strong><small>MAKE YOUR MOVE</small></div>
+        <div class="combo-pop" id="comboPop"></div>
+        <div class="arena-caption"><span>HOWARD ARENA</span><span>DAY 01 · SOUTH TOWN</span></div>
+        <div class="mobile-controls" aria-label="Touch controls">
+          <div class="movement"><button data-hold="left" aria-label="Move left">◀</button><button data-hold="right" aria-label="Move right">▶</button><button data-hold="jump" aria-label="Jump">▲</button></div>
+          <div class="actions"><button data-action="block" aria-label="Block">GUARD</button><button data-action="light" aria-label="Quick attack">PUNCH</button><button data-action="heavy" aria-label="Heavy attack">KICK</button><button data-action="special" aria-label="Special move">FAN</button></div>
+        </div>
+        <div class="overlay" id="startOverlay"><div class="overlay-panel"><div class="eyebrow">SOUTH TOWN · 1P VS CPU</div><h1>FLAMES<br/><em>OF THE RING</em></h1><p>One last fight for the title.<br/>The kunoichi meets the mountain.</p><button id="startButton" class="primary-button">INSERT COIN <span>▶</span></button><div class="overlay-hint">PRESS ENTER OR TAP TO BEGIN</div><div class="matchup"><span>MAI SHIRANUI</span><b>VS</b><span>BIG BEAR</span></div></div></div>
+        <div class="pause-overlay" id="pauseOverlay"><div><span>PAUSED</span><small>PRESS P TO RESUME</small></div></div>
+      </div>
+      <footer class="control-strip"><div><span class="key">A</span><span class="key">D</span> MOVE <span class="dot">·</span><span class="key">W</span> JUMP <span class="dot">·</span><span class="key">S</span> GUARD</div><div><span class="key">J</span> PUNCH <span class="dot">·</span><span class="key">K</span> KICK <span class="dot">·</span><span class="key">L</span> FAN ATTACK</div><div class="best-of">BEST OF 3 <span>◆</span></div></footer>
+    </section>
+    <div class="below"><span>✦ FIGHT WITH HONOR. WIN WITH STYLE.</span><span>© 1994 · SOUTH TOWN CHAMPIONSHIP</span></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
