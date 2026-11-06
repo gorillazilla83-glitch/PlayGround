@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#101017">
+  <title>Shiranui vs Big Bear — Neon Brawl</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" aria-label="Neon Brawl fighting game">
+    <canvas id="screen" aria-label="Mai Shiranui versus Big Bear fighting game"></canvas>
+    <div class="top-tools">
+      <button id="sound" class="icon-btn" aria-label="Toggle sound" title="Sound">♪</button>
+      <button id="pause" class="icon-btn" aria-label="Pause game" title="Pause">Ⅱ</button>
+    </div>
+    <div class="touch-controls" aria-label="Touch controls">
+      <div class="move-pad">
+        <button data-control="left" aria-label="Move left">◀</button>
+        <button data-control="right" aria-label="Move right">▶</button>
+        <button data-control="jump" aria-label="Jump">⬆</button>
+        <button data-control="block" aria-label="Block">◒</button>
+      </div>
+      <div class="action-pad">
+        <button data-control="special" class="special" aria-label="Special move">FAN</button>
+        <button data-control="kick" class="kick" aria-label="Kick">KICK</button>
+        <button data-control="punch" class="punch" aria-label="Punch">PUNCH</button>
+      </div>
+    </div>
+    <div id="toast" aria-live="polite"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
