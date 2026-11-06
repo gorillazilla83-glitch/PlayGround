@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#10121d">
+  <title>Neon Clash — Aoi vs Haggar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell" aria-label="Neon Clash fighting game">
+    <canvas id="game" aria-label="Aoi versus Haggar fighting arena"></canvas>
+    <div class="hud">
+      <section class="fighter-card left-card">
+        <div class="name-row"><span class="name">AOI</span><span class="role">SPEED · GLASS CANNON</span></div>
+        <div class="health-track"><div id="health-aoi" class="health-fill aoi-fill"></div><span class="health-sheen"></span></div>
+        <div class="meter-track"><div id="meter-aoi" class="meter-fill"></div></div>
+        <div class="stat-line"><span>800 HP</span><span id="status-aoi">READY</span></div>
+      </section>
+      <div class="center-hud"><div class="round-label">ROUND 1</div><div id="timer" class="timer">99</div><div id="round-call" class="round-call">ROUND 1 - FIGHT!</div></div>
+      <section class="fighter-card right-card">
+        <div class="name-row"><span class="role">HEAVY BRAWLER · TANK</span><span class="name">HAGGAR</span></div>
+        <div class="health-track"><div id="health-haggar" class="health-fill haggar-fill"></div><span class="health-sheen"></span></div>
+        <div class="meter-track"><div id="meter-haggar" class="meter-fill enemy-meter"></div></div>
+        <div class="stat-line"><span id="status-haggar">READY</span><span>1500 HP</span></div>
+      </section>
+    </div>
+    <div class="top-right"><span class="live-dot"></span>CPU BATTLE <button id="sound-toggle" aria-label="Toggle sound">♫</button></div>
+    <div id="message" class="message hidden"><div id="message-title">K.O.</div><div id="message-sub">AOI WINS!</div><button id="rematch">FIGHT AGAIN</button></div>
+    <div class="bottom-hint"><span class="desktop-hint">MOVE <b>W A S D</b> &nbsp; STRIKE <b>J</b> &nbsp; KICK <b>K</b> &nbsp; SPECIAL <b>L</b> &nbsp; BLOCK <b>SHIFT</b></span><span class="mobile-hint">DRAG TO MOVE · TAP TO STRIKE</span><span class="hint-right">BEST OF ONE <i>◆</i></span></div>
+    <div class="touch-controls" aria-label="Touch controls">
+      <div class="move-pad"><button data-key="w" class="touch-button up">▲</button><button data-key="a" class="touch-button left">◀</button><button data-key="s" class="touch-button down">▼</button><button data-key="d" class="touch-button right">▶</button></div>
+      <div class="action-pad"><button data-key="j" class="touch-button punch">PUNCH</button><button data-key="k" class="touch-button kick">KICK</button><button data-key="l" class="touch-button special">BURST</button><button data-key="shift" class="touch-button block">GUARD</button></div>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
